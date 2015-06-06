@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html> 
+<head> 
+	<title>navbar icon demo</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.1/jquery.mobile-1.2.1.min.css" />
+	<script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.2.1/jquery.mobile-1.2.1.min.js"></script>
+	<style type="text/css">
+		.ui-icon-home {
+			background: url('images/home.png') no-repeat;
+    		background-size: 16px 16px;
+		}
+		
+		.ui-icon-favorite {
+			background: url('images/favorite.png') no-repeat;
+    		background-size: 16px 16px;
+		}
+
+		.ui-icon-warning {
+			background: url('images/warning.png') no-repeat;
+    		background-size: 16px 16px;
+		}
+		
+		.ui-icon-error {
+    		background: url('images/error.png') no-repeat;
+    		background-size: 16px 16px;
+		}
+		
+		.ui-icon-clear {
+    		background: url('images/clear.png') no-repeat;
+    		background-size: 16px 16px;
+		}
+	</style>
+</head>
+<body>
+<div data-role="footer" data-position="fixed">
+    <div data-role="navbar" data-grid="d">
+    <ul>
+        <li><a id="chat" href="#" data-icon="home">Home</a></li>
+        <li><a id="email" href="#" class="ui-btn-active" data-icon="favorite">Favorite</a></li>
+        <li><a id="skull" href="#" data-icon="warning">Warning</a></li>
+        <li><a id="beer" href="#" data-icon="error">Error</a></li>
+        <li><a id="coffee" href="#" data-icon="clear">Clear</a></li>
+    </ul>
+    </div>
+</div>
+</body>
+</html>

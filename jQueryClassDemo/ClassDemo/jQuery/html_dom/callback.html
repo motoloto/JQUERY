@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+<script>
+	$(document).ready(function() {
+		$("#btn1").click(function() {
+			$("#test1").text(function(i,origText) {
+				return origText + " Hello world!";
+			});
+		});
+		
+		$("#btn2").click(function() {
+			$("#test2").html(function(i,origText) {
+				return origText + " <i>Hello</i> <b>world!</b>";
+			});
+		});
+		
+		$("#btn3").click(function() {
+			$("#w3s").attr("href", function(i,origValue) {
+				return origValue + "/jquery";
+			});
+		});
+	});
+</script>
+</head>
+
+<body>
+	<button id="btn1">Show Old/New Text</button>
+	<button id="btn2">Show Old/New HTML</button>
+	<button id="btn3">Change Attr Value</button>
+	
+	<p id="test1">This is a <b>bold</b> paragraph.</p>
+	<p id="test2">This is another <b>bold</b> paragraph.</p>
+	<p><a href="http://www.w3schools.com" id="w3s">W3Schools.com</a></p>
+</body>
+</html>

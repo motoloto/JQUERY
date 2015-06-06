@@ -1,0 +1,69 @@
+<html>  
+
+ <head>  
+ <title>Box</title>  
+
+ <script language="javascript">  
+ 
+//宣告 box 欄位  
+ var box;  
+
+ function init(){  
+
+     //取得 id 為 "box" 物件，並且指定給 box 變數  
+     box = document.getElementById("box");  
+
+     //將 onclick 註冊給 pickup    
+     box.onclick = pickup;  
+
+ }  
+
+ //撿起來  
+
+ function pickup(){  
+
+     //設定滑鼠移動時， box 跟著移動  
+     document.onmousemove = move;  
+
+    
+
+     //將onclick註冊給putdown所以再次按下滑鼠的時候，就是放下      
+     box.onclick = putdown;  
+
+ }  
+
+ function move(e){  
+
+     if(!e){  
+         e = window.event;  //IE使用
+     }  
+
+     box.style.left = (e.clientX - 5) + "px";//減5只是讓滑鼠留在方塊裡面  
+
+     box.style.top = (e.clientY - 5) + "px";  
+
+ }  
+
+ //放下  
+
+ function putdown(){  
+
+     document.onmousemove = null;  //把移動事件移除
+
+     box.onclick = pickup;//更改事件處理器  
+
+ }  
+
+ </script>  
+
+ </head>  
+
+ <body onLoad="init();">  
+
+     <div id="box" style="position:absolute;left:10px;top:10px;background-color:#888888;width:50px;height:50px">  
+
+     </div>  
+
+ </body>  
+
+ </html> 

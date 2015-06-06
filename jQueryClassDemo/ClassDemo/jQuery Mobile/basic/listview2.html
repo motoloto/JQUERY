@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html> 
+<head> 
+	<title>nested listview demo</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.1/jquery.mobile-1.2.1.min.css" />
+	<script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.2.1/jquery.mobile-1.2.1.min.js"></script>
+</head> 
+<body>
+	<ul data-role="listview" data-inset="true" data-filter="true">
+		<li><a href="#">Nissan</a>
+			<ul data-role="listview" data-inset="true" data-filter="true">
+				<li><a href="#">March</a></li>
+				<li><a href="#">Tiida</a></li>
+				<li><a href="#">Verita</a></li>
+				<li><a href="#">gtr</a></li>
+				<li><a href="#">rouge</a></li>
+			</ul>
+		</li>
+		<li><a href="#">Audi</a></li>
+		<li><a href="#">BMW</a></li>
+		<li><a href="#">Toyota</a>
+			<ol data-role="listview" data-inset="true" data-filter="true">
+				<li><a href="#">Wish</a></li>
+				<li><a href="#">Prius</a></li>
+				<li><a href="#">Altis</a></li>
+			</ol>
+		</li>
+		<li><a href="#">Benz</a></li>
+	</ul>
+</body>
+</html>
